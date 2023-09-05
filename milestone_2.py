@@ -1,10 +1,13 @@
 import random
 
-word_list  = ['orange','banana','carrot','pear','apple']
+def is_single_character(input_str):
+    return len(input_str) == 1
+
+word_list = ['orange', 'banana', 'carrot', 'pear', 'apple']
 word = random.choice(word_list)
 guess = input("Input a single character:")
 
-if len(guess) == 1 and word.isalpha():
-  print("Good guess!")
+if is_single_character(guess):
+    print("The input is a single character.")
 else:
- print("Oops!That is not a valid input")
+    print("The input is not a single character.")
