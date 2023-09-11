@@ -21,19 +21,15 @@ After each guess, you will receive feedback:
 
 #### Installation:
 Make sure you have Python installed on your computer.
-
 Download the game files from GitHub Repository Link.
 [Guess game](https://github.com/deejay80/hangman.git)
+
 Open a terminal or command prompt.
 Run:
-
 Navigate to the game directory.
 Run the game by executing python milestone_5.py.
 Play:
-
 Follow the on-screen instructions to play the game.
-
-
 License
 This game is released under the MIT License, which details the terms and conditions for using, modifying, and distributing the game.
 
