@@ -2,6 +2,10 @@ import random
 
 class Hangman:
     def __init__(self, word_list, num_lives=5):
+        '''
+        Initialize the hangman game.
+
+        '''
         self.word_list = word_list
         self.num_lives = num_lives
         self.word = random.choice(word_list)
@@ -9,7 +13,16 @@ class Hangman:
         self.num_letters = len(set(self.word))
         self.list_of_guesses = []
 
+        print(f"The mystery word has {self.num_letters} characters")
+        print(" ".join(self.word_guessed))
+
     def check_guess(self, guess):
+        '''
+        Checks if the letter is in the word.
+        If it is, it replaces the '_' in the word_guessed list with the letter.
+        If it is not, it reduces the number of lives by 1.
+
+        '''
         guess = guess.lower()
 
         if guess in self.word:
@@ -26,6 +39,13 @@ class Hangman:
             print(f"You have {self.num_lives} lives left.")
 
     def ask_for_input(self):
+        '''
+        Asks the user for a letter and checks two things:
+        1. If the letter has already been tried
+        2. If the character is a single character
+        If it passes both checks, it calls the check_guess method.
+
+        '''
         while True:
             guess = input("Guess a letter: ")
 
@@ -56,8 +76,7 @@ def play_game(word_list):
             print('Congratulations!.You won the game')
             break
 
-# Example usage:
 if __name__ == "__main__":
-    word_list = ['apple', 'banana', 'cherry', 'date', 'elderberry']
+    word_list = ['apple', 'banana', 'pear', 'orange', 'carrot']
     play_game(word_list)
 
